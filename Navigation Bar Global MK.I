@@ -8,7 +8,8 @@
 <body>
 
 <!-- ============================================ -->
-<!-- HEX SOLAR NAVIGATION - Always Scrolled State -->
+<!-- HEX SOLAR NAVIGATION - Always Dark Bar       -->
+<!-- For inner pages (no transparent state)       -->
 <!-- ============================================ -->
 
 <nav class="hex-nav scrolled" id="hexNavigation">
@@ -26,9 +27,15 @@
             <a href="/cotizar/" class="nav-link">Cotizar</a>
             <a href="/servicios/" class="nav-link">Servicios</a>
             <a href="/proceso/" class="nav-link">Proceso</a>
-            <a href="/nosotros/" class="nav-link">Nosotros</a>
             <a href="/contacto/" class="nav-link">Contacto</a>
         </div>
+        
+        <!-- WhatsApp Icon - Far Right -->
+        <a href="https://wa.me/528112345678" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </a>
         
         <!-- Mobile Menu Toggle -->
         <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
@@ -38,6 +45,9 @@
         </button>
     </div>
 </nav>
+
+<!-- Nav Spacer - Prevents content from sliding under nav -->
+<div class="nav-spacer"></div>
 
 <!-- Mobile Menu Overlay -->
 <div class="mobile-menu-overlay" id="mobileMenuOverlay">
@@ -53,6 +63,12 @@
             <a href="/proceso/" class="mobile-link">Proceso</a>
             <a href="/nosotros/" class="mobile-link">Nosotros</a>
             <a href="/contacto/" class="mobile-link">Contacto</a>
+            <a href="https://wa.me/528112345678" class="mobile-link whatsapp-mobile" target="_blank">
+                <svg class="whatsapp-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                WhatsApp
+            </a>
         </div>
     </div>
 </div>
@@ -72,7 +88,7 @@ body {
 }
 
 /* ============================================ */
-/* NAVIGATION CONTAINER - Always Blue           */
+/* NAVIGATION CONTAINER - Always Dark           */
 /* ============================================ */
 .hex-nav {
     position: fixed;
@@ -80,13 +96,15 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
+    /* Dark blue background - always visible */
     background: rgba(23, 26, 32, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    padding: 0px 0;
-    max-height: 60px;
+    padding: 10px 0;  /* Adjusted for better height */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0px 0;
+    max-height: 60px;
 }
 
 .nav-container {
@@ -95,22 +113,36 @@ body {
     padding: 0 30px;
     height: 100%;  /* Add this */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;  /* Center the menu */
     align-items: center;
+    position: relative;  /* For absolute positioning of logo and WhatsApp */
+}
+
+/* ============================================ */
+/* NAV SPACER - Prevents content overlap        */
+/* ============================================ */
+.nav-spacer {
+    height: 20px;  /* Adjust based on your nav total height */
+    width: 100%;
 }
 
 /* ============================================ */
 /* LOGO STYLES                                  */
 /* ============================================ */
+.nav-logo {
+    position: absolute;  /* Position independently */
+    left: 30px;  /* Match container padding */
+}
+
 .nav-logo a {
-    display: flex;
+     display: flex;
     align-items: center;
     max-width: 120px;
     margin-left: -10px;
 }
 
 .logo-img {
-    height: 35px;
+    height: 37px;
     width: auto;
 }
 
@@ -121,18 +153,18 @@ body {
     display: flex;
     gap: 35px;
     align-items: center;
-
 }
 
 .nav-link {
     font-size: 15px;
-    font-weight: 500;
-    color: #FFFFFF;
+    font-weight: 400;
+    color: #FFFFFF;  /* Always white on dark background */
     text-decoration: none;
     position: relative;
     transition: all 0.2s ease;
-    padding: 4px 0;
+    padding: 14px 0;
     letter-spacing: 0.5px;
+    
 }
 
 /* Hover underline effect */
@@ -145,10 +177,34 @@ body {
     height: 2px;
     background: #FFFFFF;
     transition: width 0.2s ease;
+    
 }
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* ============================================ */
+/* WHATSAPP BUTTON STYLES                       */
+/* ============================================ */
+.whatsapp-btn {
+    position: absolute;  /* Position independently */
+    right: 80px;  /* Space for mobile toggle on mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-btn svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* ============================================ */
@@ -160,7 +216,8 @@ body {
     border: none;
     cursor: pointer;
     padding: 10px;
-    position: relative;
+    position: absolute;  /* Position independently */
+    right: 20px;  /* Far right */
     z-index: 1002;
 }
 
@@ -168,7 +225,7 @@ body {
     display: block;
     width: 24px;
     height: 2px;
-    background: #FFFFFF;
+    background: #FFFFFF;  /* Always white on dark nav */
     margin: 5px 0;
     transition: all 0.3s ease;
     border-radius: 2px;
@@ -265,6 +322,19 @@ body {
     padding-left: 10px;
 }
 
+/* WhatsApp mobile link */
+.whatsapp-mobile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
 /* ============================================ */
 /* RESPONSIVE STYLES                            */
 /* ============================================ */
@@ -287,32 +357,45 @@ body {
         display: block;
     }
     
+    .whatsapp-btn {
+        right: 60px;  /* Make room for hamburger menu */
+    }
+    
     .nav-container {
         padding: 0 20px;
     }
     
+    .nav-logo {
+        left: 20px;  /* Match container padding */
+    }
+    
     /* Make logo smaller on mobile */
     .nav-logo a {
-        max-width: 180px;
+        max-width: 180px;  /* Reduce from 225px */
     }
     
     .logo-img {
-        height: 35px;
+        height: 35px;      /* Reduce from 62px */
     }
     
     .hex-nav {
         padding: 12px 0;
+    }
+    
+    /* Adjust spacer for mobile */
+    .nav-spacer {
+        height: 71px;  /* Smaller for mobile */
     }
 }
 
 /* For very small phones */
 @media (max-width: 480px) {
     .nav-logo a {
-        max-width: 150px;
+        max-width: 150px;  /* Even smaller */
     }
     
     .logo-img {
-        height: 30px;
+        height: 30px;      /* Smaller still */
     }
     
     .mobile-link {
@@ -383,3 +466,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<!-- ============================================ -->
+<!-- IMPLEMENTATION FOR INNER PAGES               -->
+<!-- ============================================ -->
+<!-- 
+1. This version has the dark blue background ALWAYS ON
+2. No scroll detection needed - perfect for inner pages
+3. Includes nav-spacer div to prevent content overlap
+4. White text is always visible on dark background
+5. Logo uses the larger size (62px) from scrolled state
+
+TO USE:
+- Copy entire code to each inner page
+- Place in Elementor HTML widget at top
+- Content will automatically start below nav
+
+CUSTOMIZATION:
+- WhatsApp number: Change 528112345678
+- Nav height: Adjust padding in .hex-nav
+- Spacer height: Adjust .nav-spacer height
+
+ACTIVE PAGE HIGHLIGHTING (Optional):
+Add class "active" to current page link
+Example for Cotizar page:
+<a href="/cotizar/" class="nav-link active">Cotizar</a>
+
+Then add this CSS:
+.nav-link.active {
+    color: #9AD85C;
+}
+-->
+
+</body>
+</html>
