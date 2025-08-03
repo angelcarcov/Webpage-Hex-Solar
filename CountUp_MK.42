@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo Feliz - Production Version</title>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- RECIBO FELIZ - SUNRUN STYLE PRODUCTION       -->
+<!-- For Hex Solar - Elementor Implementation     -->
+<!-- ============================================ -->
+
+<!-- HTML Structure - Copy this into Elementor HTML Widget -->
+<div class="recibo-section-wrapper">
+    <div class="recibo-content-grid">
+        <!-- Left Column - Image -->
+        <div class="image-column">
+            <div class="rounded-image-wrapper">
+                <img src="https://hexsolar.mx/wp-content/uploads/2025/07/recibo-feliz-image.png" 
+                     alt="Hombre relajado disfrutando del aire acondicionado" 
+                     class="rounded-image">
+            </div>
+        </div>
+        
+        <!-- Right Column - Animation -->
+        <div class="content-column">
+            <div class="recibo-container" id="recibo-section">
+                <h1 id="animated-number" class="big-number">$3,850</h1>
+                <p id="subtitle" class="subtitle">Así de ligero puede ser tu recibo</p>
+                <a href=/cotizar/ id="cta-button" class="cta-button">
+                    <span>AGENDA CITA TÉCNICA</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* ============================================ */
+/* SECTION WRAPPER                              */
+/* ============================================ */
+.recibo-section-wrapper {
+    background: #FFFFFF;
+    padding: 80px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ============================================ */
+/* GRID LAYOUT                                  */
+/* ============================================ */
+.recibo-content-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: left;
+    padding: 0 0px;
+ 
+    
+}
+
+/* ============================================ */
+/* IMAGE STYLES - SUNRUN STYLE                  */
+/* ============================================ */
+.image-column {
+    position: relative;
+}
+
+.rounded-image-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0);
+    background: #f8f9fa;
+    width: 100%;
+    aspect-ratio: 4/3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover effect on image */
+.rounded-image-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.rounded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================================ */
+/* CONTENT STYLES                               */
+/* ============================================ */
+.content-column {
+    padding-left: 30px;
+    padding-right: 20px;  /* Push image left */
+
+}
+
+.recibo-container {
+    text-align: left;
+}
+
+/* ============================================ */
+/* ANIMATED NUMBER                              */
+/* ============================================ */
+.big-number {
+    font-size: 120px;
+    font-weight: 300;
+    color: #1a2332;
+    margin: 0;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -3px;
+}
+
+/* ============================================ */
+/* SUBTITLE                                     */
+/* ============================================ */
+.subtitle {
+    font-size: 28px;
+    color: #4b5563;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.subtitle.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================ */
+/* CTA BUTTON - HEX SOLAR DARK STYLE            */
+/* ============================================ */
+.cta-button {
+    background: #1a2332;
+    color: #FFFFFF;
+    padding: 14px 48px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta-button:hover {
+    background: #0d0e12;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(23, 26, 32, 0.25);
+}
+
+/* ============================================ */
+/* MOBILE RESPONSIVE                            */
+/* ============================================ */
+@media (max-width: 768px) {
+    .recibo-section-wrapper {
+        padding: 60px 0;
+    }
+    
+    .recibo-content-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 0 20px;
+    }
+    
+    .rounded-image-wrapper {
+        aspect-ratio: 16/9;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .content-column {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    
+    .recibo-container {
+        text-align: center !important;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto !important;
+    }
+    
+    /* Force center alignment for all children */
+    .recibo-container * {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .big-number {
+        font-size: 72px;
+        letter-spacing: -2px;
+        display: block !important;
+    }
+    
+    .subtitle {
+        font-size: 20px;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        display: block !important;
+    }
+    
+    .cta-button {
+        padding: 12px 36px;
+        font-size: 14px;
+        display: inline-block !important;
+    }
+}
+
+/* ============================================ */
+/* TABLET RESPONSIVE                            */
+/* ============================================ */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .recibo-content-grid {
+        gap: 60px;
+        padding: 0 30px;
+    }
+    
+    .big-number {
+        font-size: 90px;
+    }
+    
+    .subtitle {
+        font-size: 24px;
+    }
+}
+
+/* ============================================ */
+/* LARGE SCREENS                                */
+/* ============================================ */
+@media (min-width: 1400px) {
+    .recibo-content-grid {
+        max-width: 1300px;
+        gap: 100px;
+    }
+    
+    .big-number {
+        font-size: 140px;
+    }
+    
+    .subtitle {
+        font-size: 32px;
+    }
+}
+</style>
+
+<script>
+/* ============================================ */
+/* COUNTUP ANIMATION SCRIPT                     */
+/* ============================================ */
+(function() {
+    let hasAnimated = false;
+    
+    // Main animation function with easing
+    function animateValue(element, start, end, duration, callback) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            
+            // Smooth easing function
+            const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(easeOutCubic * (end - start) + start);
+            
+            // Format with comma separator
+            element.textContent = '$' + current.toLocaleString();
+            
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                if (callback) callback();
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+    
+    // Start the animation sequence
+    function startAnimation() {
+        if (hasAnimated) return;
+        hasAnimated = true;
+        
+        const number = document.getElementById('animated-number');
+        const subtitle = document.getElementById('subtitle');
+        const button = document.getElementById('cta-button');
+        
+        if (!number) return;
+        
+        // CUSTOMIZABLE PARAMETERS
+        const startValue = 3850;        // Starting number
+        const endValue = 60;           // Ending number
+        const animationDuration = 2000; // 2 seconds
+        const subtitleDelay = 100;      // Delay before subtitle
+        const buttonDelay = 300;        // Delay before button
+        
+        // Start countdown
+        animateValue(number, startValue, endValue, animationDuration, function() {
+            // Show subtitle
+            setTimeout(function() {
+                if (subtitle) subtitle.classList.add('show');
+                
+                // Show button
+                setTimeout(function() {
+                    if (button) button.classList.add('show');
+                }, buttonDelay);
+            }, subtitleDelay);
+        });
+    }
+    
+    // Set up Intersection Observer
+    function setupScrollTrigger() {
+        const section = document.getElementById('recibo-section');
+        if (!section) {
+            setTimeout(setupScrollTrigger, 500);
+            return;
+        }
+        
+        const observerOptions = {
+            threshold: 0.3,     // Trigger when 30% visible
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    startAnimation();
+                }
+            });
+        }, observerOptions);
+        
+        observer.observe(section);
+    }
+    
+    // Initialize
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupScrollTrigger);
+    } else {
+        setTimeout(setupScrollTrigger, 500);
+    }
+})();
+</script>
+
+<!-- ============================================ -->
+<!-- ELEMENTOR IMPLEMENTATION GUIDE               -->
+<!-- ============================================ -->
+<!-- 
+1. ADD TO ELEMENTOR:
+   - Add HTML widget
+   - Paste ALL code (HTML + CSS + Script)
+   - Save and preview
+
+2. CUSTOMIZATION OPTIONS:
+   - Border radius: Change "16px" in .rounded-image-wrapper
+   - Shadow intensity: Adjust rgba values in box-shadow
+   - Grid gap: Change "80px" in .recibo-content-grid
+   - Animation timing: Modify values in the script section
+
+3. ELEMENTOR SETTINGS:
+   - Set widget width to "Full Width"
+   - Remove any widget margins
+   - If using container, set to "Boxed" or "Full Width"
+
+4. PERFORMANCE TIPS:
+   - Optimize image (use WebP format if possible)
+   - Consider lazy loading for below-fold placement
+   - Test Core Web Vitals after implementation
+
+5. BRAND ALIGNMENT:
+   - Dark button (#171A20) matches your brand
+   - Clean typography supports trust messaging
+   - Professional layout reinforces quality promise
+-->
+
+</body>
+</html>
