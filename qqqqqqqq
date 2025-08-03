@@ -3,565 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hex Solar - Navigation</title>
+    <title>Hex Solar - Hero Section</title>
 </head>
 <body>
 
 <!-- ============================================ -->
-<!-- HEX SOLAR NAVIGATION - Tesla Style           -->
-<!-- Transparent overlay for video background     -->
+<!-- HEX SOLAR HERO VIDEO SECTION                 -->
+<!-- Tesla-Style Design for Solar Panel Website   -->
 <!-- ============================================ -->
 
-<nav class="hex-nav" id="hexNavigation">
-    <div class="nav-container">
-        <!-- Logo -->
-        <div class="nav-logo">
-            <a href="/home/">
-                <img src="https://hexsolar.mx/wp-content/uploads/2025/07/hex_solar_logo_transparent-1.png" alt="Hex Solar" class="logo-img">
-            </a>
-        </div>
-        
-        <!-- Desktop Navigation Menu -->
-        <div class="nav-menu" id="navMenu">
-            <a href="/home/" class="nav-link">Inicio</a>
-            <a href="/cotizar/" class="nav-link">Cotizar</a>
-            <a href="/servicios/" class="nav-link">Servicios</a>
-            <a href="/proceso/" class="nav-link">Proceso</a>
-          
-            <a href="/contacto/" class="nav-link">Contacto</a>
-        </div>
-        
-        <!-- WhatsApp Icon - Far Right -->
-        <a href="https://wa.me/528112345678" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-        </a>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+<!-- Tesla-Style Hero Video Section -->
+<div class="tesla-hero-container" id="teslaHeroSection">
+    <!-- Background Video -->
+    <div class="video-background">
+        <video id="heroVideo" autoplay muted loop playsinline preload="metadata">
+            <!-- Videos will be dynamically loaded from Bunny CDN -->
+        </video>
+        <div class="video-overlay"></div>
     </div>
-</nav>
+    
+    <!-- Content Overlay -->
+    <div class="hero-text">
+        <h1 class="hero-title">Paneles Solares</h1>
+        <p class="hero-subtitle">Respira fresco, energía propia.</p>
+    </div>
 
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <div class="mobile-menu-content">
-        <!-- Mobile Menu Logo -->
-        <div class="mobile-menu-logo">
-            <img src="https://hexsolar.mx/wp-content/uploads/2025/07/hex_solar_logo_textcolor_1A2332-1-photoshop.png" alt="Hex Solar" class="mobile-logo-img">
-        </div>
-        <button class="mobile-close" id="mobileClose" aria-label="Cerrar">
-            <span></span>
-            <span></span>
-        </button>
-        <div class="mobile-links">
-            <a href="/home/" class="mobile-link">Inicio</a>
-            <a href="/cotizar/" class="mobile-link">Cotizar</a>
-            <a href="/servicios/" class="mobile-link">Servicios</a>
-            <a href="/proceso/" class="mobile-link">Proceso</a>
-            <a href="/nosotros/" class="mobile-link">Nosotros</a>
-            <a href="/contacto/" class="mobile-link">Contacto</a>
-            <a href="https://wa.me/528112345678" class="mobile-link whatsapp-mobile" target="_blank">
-                <svg class="whatsapp-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                WhatsApp
-            </a>
-        </div>
+    <!-- Move buttons OUTSIDE hero-text -->
+    <div class="hero-buttons">
+        <a href="https://wa.me/528443061078?text=Hola%2C%20quiero%20ser%20parte%20del%20cambio%20con%20energ%C3%ADa%20solar.%20%C2%BFC%C3%B3mo%20empiezo%3F" class="btn btn-primary" target="_blank">Ordena ya</a>
+        <a href=/cotizar/ class="btn btn-secondary">Descubre tu ahorro</a>
     </div>
 </div>
 
 <style>
 /* ============================================ */
-/* RESET & BASE STYLES                          */
+/* CONTAINER & LAYOUT                           */
 /* ============================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-/* ============================================ */
-/* NAVIGATION CONTAINER                         */
-/* ============================================ */
-.hex-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: transparent;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 12px 0;  /* Reduced from 35px for better proportion */
-    min-height: 80px;  /* Add minimum height to prevent cutting */
-}
-
-/* Scrolled state */
-.hex-nav.scrolled {
-    background: rgba(23, 26, 32, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    padding: 1px 0;  /* Slightly increased for proper spacing */
-    min-height: 70px;  /* Ensure content isn't cut off */
-}
-
-.nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 30px;  /* Removed vertical padding */
-    display: flex;
-    justify-content: center;  /* Center the menu */
-    align-items: center;
-    position: relative;  /* For absolute positioning of logo and WhatsApp */
-    min-height: 60px;  /* Ensure minimum height for content */
-}
-
-/* ============================================ */
-/* LOGO STYLES                                  */
-/* ============================================ */
-.nav-logo {
-    position: absolute;  /* Position independently */
-    left: 30px;  /* Match container padding */
-}
-
-.nav-logo a {
-    display: flex;
-    align-items: center;
-    max-width: 225px;  /* Constrain the logo area */
-}
-
-.logo-img {
-    height: 50px;
-    width: auto;
-}
-
-.hex-nav.scrolled .logo-img {
-    height: 62px;
-}
-
-/* ============================================ */
-/* DESKTOP MENU STYLES                          */
-/* ============================================ */
-.nav-menu {
-    display: flex;
-    gap: 35px;
-    align-items: center;
-}
-
-.nav-link {
-    font-size: 15px;
-    font-weight: 500;
-    color: #FFFFFF;
-    text-decoration: none;
+.tesla-hero-container {
     position: relative;
-    transition: all 0.2s ease;
-    padding: 8px 0;
-    letter-spacing: 0.5px;
-}
-
-/* Text color when scrolled */
-.hex-nav.scrolled .nav-link {
-    color: #FFFFFF;
-}
-
-/* Hover underline effect */
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FFFFFF;
-    transition: width 0.2s ease;
-}
-
-.hex-nav.scrolled .nav-link::after {
-    background: #FFFFFF;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* ============================================ */
-/* WHATSAPP BUTTON STYLES                       */
-/* ============================================ */
-.whatsapp-btn {
-    position: absolute;  /* Position independently */
-    right: 80px;  /* Space for mobile toggle on mobile */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    transition: all 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-    transform: scale(1.1);
-}
-
-.whatsapp-btn svg {
-    width: 24px;
-    height: 24px;
-}
-
-/* ============================================ */
-/* MOBILE TOGGLE BUTTON                         */
-/* ============================================ */
-.mobile-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;  /* Position independently */
-    right: 20px;  /* Far right */
-    z-index: 1002;
-}
-
-.mobile-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #FFFFFF;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-}
-
-.hex-nav.scrolled .mobile-toggle span {
-    background: #FFFFFF;  /* Keep white on dark background */
-}
-
-/* Toggle animation */
-.mobile-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.mobile-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* ============================================ */
-/* MOBILE MENU OVERLAY                          */
-/* ============================================ */
-.mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    right: -100%;
     width: 100%;
     height: 100vh;
-    background: #FFFFFF;
-    z-index: 999;
-    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow-y: auto;
+    overflow: hidden;
+    /* Fix for navigation overlap - adjust the value based on your nav height */
+    margin-top: -80px;  /* Negative margin to pull hero up under nav */
+    padding-top: 80px;  /* Padding to push content down */
 }
 
-.mobile-menu-overlay.active {
-    right: 0;
-}
-
-.mobile-menu-content {
-    padding: 80px 40px 40px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Mobile Menu Logo */
-.mobile-menu-logo {
+/* ============================================ */
+/* VIDEO BACKGROUND                             */
+/* ============================================ */
+.video-background {
     position: absolute;
-    top: 25px;
-    left: 40px;
-    max-width: 150px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
-.mobile-logo-img {
-    height: 40px;
-    width: auto;
-}
-
-.mobile-close {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-}
-
-.mobile-close span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #171A20;
+.video-background video {
     position: absolute;
     top: 50%;
     left: 50%;
-    border-radius: 2px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
-.mobile-close span:first-child {
-    transform: translate(-50%, -50%) rotate(45deg);
+/* Subtle overlay for better text readability */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0.2) 130%, 
+        rgba(0,0,0,0) 130%, 
+        rgba(0,0,0,0.3) 120%);
+    z-index: 2;
 }
 
-.mobile-close span:last-child {
-    transform: translate(-50%, -50%) rotate(-45deg);
+/* ============================================ */
+/* HERO TEXT CONTENT                            */
+/* ============================================ */
+.hero-text {
+    position: absolute;
+    top: 25%;                   /* Position text higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
 }
 
-.mobile-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 40px;
-}
-
-.mobile-link {
-    font-size: 28px;
+/* Typography */
+.hero-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 48px;
     font-weight: 500;
-    color: #171A20;
-    text-decoration: none;
-    padding: 20px 0;
-    border-bottom: 1px solid #E5E5E5;
-    transition: all 0.2s ease;
+    color: #FFFFFF;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+    line-height: 0.9;
 }
 
-.mobile-link:hover {
-    color: #7BC043;
-    padding-left: 10px;
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0 0 px 0;         /* Increase this number to push buttons down */
+    opacity: 0.9;
 }
 
-/* WhatsApp mobile link */
-.whatsapp-mobile {
+/* ============================================ */
+/* CTA BUTTONS                                  */
+/* ============================================ */
+/* Buttons Container */
+.hero-buttons {
+    position: absolute;
+    bottom: 120px;  /* Clean, predictable positioning */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
+    gap: 15px;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
+    z-index: 10;
 }
 
-.whatsapp-icon {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+/* Button Base Styles */
+.btn {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 50px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 150ms ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    white-space: nowrap;  /* Prevents text from breaking */
+}
+
+/* Primary Button - "Ordena ya" */
+.btn-primary {
+    background-color: #FFFFFF;
+    color: #171A20;
+    border: none;
+    padding: 9px 90px;
+}
+
+.btn-primary:hover {
+    background-color: #0d0e12; /* 5% darker */
+    color: #FFFFFF;
+    transform: scale(1.01);
+}
+
+/* Secondary Button - "Descubre tu ahorro" */
+.btn-secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-shadow: inset 0 0 0 1px #FFFFFF;
+    padding: 7px 45px;
+}
+
+.btn-secondary:hover {
+    background-color: #FFFFFF;
+    color: #171A20;
+    transform: scale(1.01);
 }
 
 /* ============================================ */
-/* RESPONSIVE STYLES                            */
+/* MOBILE RESPONSIVE                            */
 /* ============================================ */
-@media (max-width: 1024px) {
-    .nav-container {
-        padding: 0 30px;
-    }
-    
-    .nav-menu {
-        gap: 25px;
-    }
-}
-
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
-    .mobile-toggle {
-        display: block;
-    }
-    
-    .whatsapp-btn {
-        right: 60px !important;  /* Make room for hamburger menu */
-        width: 35px !important;
-        height: 35px !important;
-    }
-    
-    .whatsapp-btn svg {
-        width: 20px !important;
-        height: 20px !important;
-    }
-    
-    .nav-container {
-        padding: 0 20px !important;
-        min-height: 40px !important;  /* Force smaller height */
-    }
-    
-    .nav-logo {
-        left: 12px !important;  /* Match container padding */
-    }
-    
-    /* Make logo bigger on mobile to fill the bar properly */
-    .nav-logo a {
-        max-width: 180px !important;  /* Bigger logo container */
-    }
-    
-    .logo-img {
-        height: 50px !important;      /* Bigger logo for transparent state */
-    }
-    
-    /* CRITICAL: Override the main nav padding on mobile */
-    .hex-nav {
-        padding: 5px 0 !important;  /* Force minimal padding */
-        min-height: 50px !important;  /* Force compact height */
-    }
-    
-    /* Override scrolled state specifically for mobile */
-    .hex-nav.scrolled {
-        padding: 5px 0 !important;  /* Force same minimal padding */
-        min-height: 40px !important;  /* Force even more compact when scrolled */
-    }
-    
-    .hex-nav.scrolled .logo-img {
-        height: 50px !important;      /* Bigger logo for scrolled state */
-    }
-}
 
-/* For very small phones */
-@media (max-width: 480px) {
-    .nav-logo a {
-        max-width: 150px;  /* Even smaller */
+    
+    .hero-subtitle {
+        font-size: 17px;
+        margin-bottom: 10px;
+        line-height: 1.2;
+     
     }
     
-    .logo-img {
-        height: 30px;      /* Smaller still */
+       .hero-title {
+        font-size: 34px;         /* Reduced to fit better */
+        letter-spacing: -1px;    /* Tighter spacing */
+        white-space: nowrap;     /* Force single line */
     }
     
-    .mobile-link {
-        font-size: 24px;
-        padding: 18px 0;
+    .hero-buttons {
+        flex-direction: column;
+        gap: 13px;
+        width: 100%;
     }
     
-    .mobile-menu-content {
-        padding: 70px 30px 30px;
+    .btn {
+        width: 90%;
+        max-width: 300px;
+        padding: 9px 24px;
+        display: flex;
+        justify-content: center; /* horizontal centering */
+        align-items: center;     /* vertical centering */
+        text-align: center;
     }
-    
-    .mobile-close {
-        top: 25px;
-        right: 30px;
-    }
-}
-
-/* ============================================ */
-/* SMOOTH SCROLLING FOR SECTIONS                */
-/* ============================================ */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Prevent body scroll when mobile menu is open */
-body.mobile-menu-open {
-    overflow: hidden;
 }
 </style>
 
 <script>
+/* ============================================ */
+/* VIDEO LOADING & QUALITY DETECTION            */
+/* ============================================ */
 document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.getElementById('hexNavigation');
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const mobileClose = document.getElementById('mobileClose');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+    // YOUR BUNNY CDN VIDEO URLs with 4 resolutions
+    const videoSources = {
+        mobile: 'https://solar-hero-cdn.b-cdn.net/hero-720p.mp4',
+        desktop: 'https://solar-hero-cdn.b-cdn.net/hero-1080p.mp4',
+        high: 'https://solar-hero-cdn.b-cdn.net/hero-2K.mp4',
+        premium: 'https://solar-hero-cdn.b-cdn.net/hero-4k.mp4'
+    };
     
-    // Scroll detection for nav background
-    let lastScroll = 0;
+    // Add class to body for styling
+    document.body.classList.add('tesla-hero-active');
     
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
+    // Detect optimal video quality
+    function getOptimalVideoQuality() {
+        const width = window.innerWidth;
+        const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
         
-        // Add/remove scrolled class
-        if (currentScroll > 350) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
+        if (connection && connection.effectiveType) {
+            if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+                return 'mobile';
+            }
+            if (connection.effectiveType === '3g' || width <= 768) {
+                return 'mobile';
+            }
+            if (connection.effectiveType === '4g') {
+                if (width > 2560) return 'premium';
+                if (width > 1920) return 'high';
+                if (width > 1280) return 'desktop';
+                return 'mobile';
+            }
         }
         
-        lastScroll = currentScroll;
-    });
+        // Fallback to screen size
+        if (width <= 768) return 'mobile';
+        if (width <= 1920) return 'desktop';
+        if (width <= 2560) return 'high';
+        return 'premium';
+    }
     
-    // Mobile menu toggle
-    mobileToggle.addEventListener('click', function() {
-        mobileToggle.classList.toggle('active');
-        mobileMenuOverlay.classList.toggle('active');
-        document.body.classList.toggle('mobile-menu-open');
-    });
-    
-    // Close mobile menu
-    mobileClose.addEventListener('click', function() {
-        mobileToggle.classList.remove('active');
-        mobileMenuOverlay.classList.remove('active');
-        document.body.classList.remove('mobile-menu-open');
-    });
-    
-    // Close mobile menu when clicking links
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileToggle.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            document.body.classList.remove('mobile-menu-open');
+    // Load video
+    function loadDynamicVideo() {
+        const video = document.getElementById('heroVideo');
+        const quality = getOptimalVideoQuality();
+        const videoUrl = videoSources[quality];
+        
+        console.log('Loading video quality:', quality);
+        
+        const source = document.createElement('source');
+        source.src = videoUrl;
+        source.type = 'video/mp4';
+        video.appendChild(source);
+        
+        video.load();
+        
+        video.addEventListener('loadeddata', function() {
+            console.log('Video loaded successfully');
+            video.play().catch(function(error) {
+                console.log('Autoplay prevented:', error);
+            });
         });
-    });
+    }
     
-    // Close mobile menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
-            mobileToggle.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            document.body.classList.remove('mobile-menu-open');
+    // Initialize
+    setTimeout(loadDynamicVideo, 100);
+    
+    // Handle scroll to show/hide based on position
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const heroHeight = window.innerHeight;
+        
+        // Optional: Add parallax effect
+        const hero = document.querySelector('.tesla-hero-container');
+        if (hero && scrollTop < heroHeight) {
+            hero.style.transform = `translateY(${scrollTop * 0.5}px)`;
         }
     });
 });
 </script>
 
 <!-- ============================================ -->
-<!-- IMPLEMENTATION INSTRUCTIONS                  -->
+<!-- IMPLEMENTATION NOTES                         -->
 <!-- ============================================ -->
 <!-- 
-1. ELEMENTOR INTEGRATION:
-   - Add an HTML widget at the very top of your page
-   - Copy ALL the code above (HTML + CSS + JS)
-   - The navigation will float over your video
+BRAND ALIGNMENT:
+- Hero message: "Respira fresco, energía propia" aligns with comfort messaging
+- CTAs: "Ordena ya" (primary) and "Descubre tu ahorro" (secondary) follow the conversion strategy
+- Clean Tesla-style design maintains premium feel while being approachable
 
-2. CUSTOMIZATION POINTS:
-   - WhatsApp number: Change 528112345678 to your actual number
-   - Logo size: .logo-img { height: 50px; }
-   - Scrolled logo: .hex-nav.scrolled .logo-img { height: 80px; }
-   - Scroll trigger: Change 350 in JavaScript
-   - Nav padding: .hex-nav { padding: 10px 0; }
-   - Colors: background: rgba(23, 26, 32, 0.95);
+TECHNICAL NOTES:
+1. Video URLs configured for Bunny CDN with 4 quality levels
+2. Automatic quality detection based on connection speed and device
+3. Parallax scrolling effect for enhanced user experience
+4. Mobile-first responsive design
 
-3. MOBILE RESPONSIVE:
-   - Logo automatically resizes
-   - Hamburger menu appears < 768px
-   - WhatsApp icon adjusts position
-   - Full-screen mobile menu
+ELEMENTOR IMPLEMENTATION:
+- Add as HTML widget in Elementor
+- Ensure no conflicting CSS from theme
+- Test video autoplay on mobile devices
+- Monitor loading performance with GTmetrix
 
-4. FEATURES:
-   - Transparent initially (over video)
-   - Dark blue background when scrolled
-   - Centered menu items
-   - WhatsApp icon on far right
-   - Smooth transitions
-   - Mobile-optimized
-
-5. TESTING:
-   - Check all page links work
-   - Test WhatsApp link
-   - Test scroll behavior
-   - Verify mobile menu functions
-   - Ensure video plays behind nav
+KPIs TO TRACK:
+- Hero CTR target: ≥ 8%
+- Video load time: < 3 seconds
+- Mobile engagement rate
 -->
 
 </body>
