@@ -101,9 +101,8 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    padding: 10px 0;  /* Adjusted for better height */
+    padding: 0px 0;  /* Adjusted for better height */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 0px 0;
     max-height: 60px;
 }
 
@@ -375,16 +374,17 @@ body {
     }
     
     .logo-img {
-        height: 35px;      /* Reduce from 62px */
+        height: 20px;      /* Reduce from 62px */
+        background-color: red
     }
     
     .hex-nav {
-        padding: 12px 0;
+        padding: 22px 0;
     }
     
     /* Adjust spacer for mobile */
     .nav-spacer {
-        height: 71px;  /* Smaller for mobile */
+        height: 7px;  /* Smaller for mobile */
     }
 }
 
@@ -395,7 +395,7 @@ body {
     }
     
     .logo-img {
-        height: 30px;      /* Smaller still */
+        height: 20px;      /* Smaller still */
     }
     
     .mobile-link {
