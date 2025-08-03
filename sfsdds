@@ -100,7 +100,8 @@ body {
     z-index: 1000;
     background: transparent;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 35px 0;
+    padding: 20px 0;  /* Reduced from 35px for better proportion */
+    min-height: 80px;  /* Add minimum height to prevent cutting */
 }
 
 /* Scrolled state */
@@ -109,17 +110,19 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    padding: 8px 0;  /* Reduced from 15px to make it flatter */
+    padding: 12px 0;  /* Slightly increased for proper spacing */
+    min-height: 70px;  /* Ensure content isn't cut off */
 }
 
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 4px 30px;
+    padding: 0 30px;  /* Removed vertical padding */
     display: flex;
     justify-content: center;  /* Center the menu */
     align-items: center;
     position: relative;  /* For absolute positioning of logo and WhatsApp */
+    min-height: 60px;  /* Ensure minimum height for content */
 }
 
 /* ============================================ */
@@ -386,6 +389,7 @@ body {
     
     .nav-container {
         padding: 0 20px;
+        min-height: 45px;  /* Even smaller */
     }
     
     .nav-logo {
@@ -394,24 +398,37 @@ body {
     
     /* Make logo smaller on mobile */
     .nav-logo a {
-        max-width: 180px;  /* Reduce from 225px */
+        max-width: 150px;  /* Smaller logo container */
     }
     
     .logo-img {
-        height: 35px;      /* Reduce from 50px */
+        height: 28px;      /* Much smaller logo */
     }
     
     /* Also adjust when scrolled */
     .hex-nav.scrolled .logo-img {
-        height: 30px;      /* Keep it proportional */
+        height: 25px;      /* Even smaller when scrolled */
     }
     
     .hex-nav {
-        padding: 15px 0;
+        padding: 5px 0;  /* Minimal padding */
+        min-height: 50px;  /* Compact height */
     }
     
     .hex-nav.scrolled {
-        padding: 10px 0;
+        padding: 5px 0;  /* Same minimal padding */
+        min-height: 45px;  /* Even more compact when scrolled */
+    }
+    
+    /* Make WhatsApp button smaller on mobile */
+    .whatsapp-btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .whatsapp-btn svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
