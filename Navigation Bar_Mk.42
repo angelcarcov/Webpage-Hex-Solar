@@ -266,6 +266,7 @@ body {
     z-index: 999;
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
 }
 
 .mobile-menu-overlay.active {
@@ -279,18 +280,19 @@ body {
 }
 
 .mobile-menu-content {
-    padding: 80px 40px 40px;
+    padding: 20px 40px 40px;  /* Further reduced top padding */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* Allow content to scroll */
 }
 
 /* Mobile Menu Logo */
 .mobile-menu-logo {
-    position: absolute;
-    top: 25px;
-    left: 40px;
+    position: center;
     max-width: 150px;
+    margin: 0 auto 1px auto;  /* Minimal bottom margin */
+    text-align: center;
 }
 
 .mobile-logo-img {
@@ -302,7 +304,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-top: 40px;
+    margin-top: 20px;  /* Reduced from 40px */
 }
 
 .mobile-link {
