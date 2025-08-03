@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Solar - Hero Section</title>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- HEX SOLAR HERO VIDEO SECTION                 -->
+<!-- Tesla-Style Design for Solar Panel Website   -->
+<!-- ============================================ -->
+
+<!-- Tesla-Style Hero Video Section -->
+<div class="tesla-hero-container" id="teslaHeroSection">
+    <!-- Background Video -->
+    <div class="video-background">
+        <video id="heroVideo" autoplay muted loop playsinline preload="metadata">
+            <!-- Videos will be dynamically loaded from Bunny CDN -->
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <!-- Content Overlay -->
+    <div class="hero-text">
+        <h1 class="hero-title">Paneles Solares</h1>
+        <p class="hero-subtitle">Respira fresco, energía propia.</p>
+    </div>
+
+    <!-- Move buttons OUTSIDE hero-text -->
+    <div class="hero-buttons">
+        <a href="https://wa.me/528443061078?text=Hola%2C%20quiero%20ser%20parte%20del%20cambio%20con%20energ%C3%ADa%20solar.%20%C2%BFC%C3%B3mo%20empiezo%3F" class="btn btn-primary" target="_blank">Ordena ya</a>
+        <a href=/cotizar/ class="btn btn-secondary">Descubre tu ahorro</a>
+    </div>
+</div>
+
+<style>
+/* ============================================ */
+/* CONTAINER & LAYOUT                           */
+/* ============================================ */
+.tesla-hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* Fix for navigation overlap - adjust the value based on your nav height */
+    margin-top: -80px;  /* Negative margin to pull hero up under nav */
+    padding-top: 80px;  /* Padding to push content down */
+}
+
+/* ============================================ */
+/* VIDEO BACKGROUND                             */
+/* ============================================ */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Subtle overlay for better text readability */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0.2) 130%, 
+        rgba(0,0,0,0) 130%, 
+        rgba(0,0,0,0.3) 120%);
+    z-index: 2;
+}
+
+/* ============================================ */
+/* HERO TEXT CONTENT                            */
+/* ============================================ */
+.hero-text {
+    position: absolute;
+    top: 25%;                   /* Position text higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+}
+
+/* Typography */
+.hero-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+    line-height: 0.9;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0 0 px 0;         /* Increase this number to push buttons down */
+    opacity: 0.9;
+}
+
+/* ============================================ */
+/* CTA BUTTONS                                  */
+/* ============================================ */
+/* Buttons Container */
+.hero-buttons {
+    position: absolute;
+    bottom: 120px;  /* Clean, predictable positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Button Base Styles */
+.btn {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 50px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 150ms ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    white-space: nowrap;  /* Prevents text from breaking */
+}
+
+/* Primary Button - "Ordena ya" */
+.btn-primary {
+    background-color: #FFFFFF;
+    color: #171A20;
+    border: none;
+    padding: 9px 90px;
+}
+
+.btn-primary:hover {
+    background-color: #0d0e12; /* 5% darker */
+    color: #FFFFFF;
+    transform: scale(1.01);
+}
+
+/* Secondary Button - "Descubre tu ahorro" */
+.btn-secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-shadow: inset 0 0 0 1px #FFFFFF;
+    padding: 7px 45px;
+}
+
+.btn-secondary:hover {
+    background-color: #FFFFFF;
+    color: #171A20;
+    transform: scale(1.01);
+}
+
+/* ============================================ */
+/* MOBILE RESPONSIVE                            */
+/* ============================================ */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 39px;
+        letter-spacing: 0.5px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 13px;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 90%;
+        max-width: 300px;
+        padding: 9px 24px;
+        display: flex;
+        justify-content: center; /* horizontal centering */
+        align-items: center;     /* vertical centering */
+        text-align: center;
+    }
+}
+</style>
+
+<script>
+/* ============================================ */
+/* VIDEO LOADING & QUALITY DETECTION            */
+/* ============================================ */
+document.addEventListener('DOMContentLoaded', function() {
+    // YOUR BUNNY CDN VIDEO URLs with 4 resolutions
+    const videoSources = {
+        mobile: 'https://solar-hero-cdn.b-cdn.net/hero-720p.mp4',
+        desktop: 'https://solar-hero-cdn.b-cdn.net/hero-1080p.mp4',
+        high: 'https://solar-hero-cdn.b-cdn.net/hero-2K.mp4',
+        premium: 'https://solar-hero-cdn.b-cdn.net/hero-4k.mp4'
+    };
+    
+    // Add class to body for styling
+    document.body.classList.add('tesla-hero-active');
+    
+    // Detect optimal video quality
+    function getOptimalVideoQuality() {
+        const width = window.innerWidth;
+        const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        
+        if (connection && connection.effectiveType) {
+            if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+                return 'mobile';
+            }
+            if (connection.effectiveType === '3g' || width <= 768) {
+                return 'mobile';
+            }
+            if (connection.effectiveType === '4g') {
+                if (width > 2560) return 'premium';
+                if (width > 1920) return 'high';
+                if (width > 1280) return 'desktop';
+                return 'mobile';
+            }
+        }
+        
+        // Fallback to screen size
+        if (width <= 768) return 'mobile';
+        if (width <= 1920) return 'desktop';
+        if (width <= 2560) return 'high';
+        return 'premium';
+    }
+    
+    // Load video
+    function loadDynamicVideo() {
+        const video = document.getElementById('heroVideo');
+        const quality = getOptimalVideoQuality();
+        const videoUrl = videoSources[quality];
+        
+        console.log('Loading video quality:', quality);
+        
+        const source = document.createElement('source');
+        source.src = videoUrl;
+        source.type = 'video/mp4';
+        video.appendChild(source);
+        
+        video.load();
+        
+        video.addEventListener('loadeddata', function() {
+            console.log('Video loaded successfully');
+            video.play().catch(function(error) {
+                console.log('Autoplay prevented:', error);
+            });
+        });
+    }
+    
+    // Initialize
+    setTimeout(loadDynamicVideo, 100);
+    
+    // Handle scroll to show/hide based on position
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const heroHeight = window.innerHeight;
+        
+        // Optional: Add parallax effect
+        const hero = document.querySelector('.tesla-hero-container');
+        if (hero && scrollTop < heroHeight) {
+            hero.style.transform = `translateY(${scrollTop * 0.5}px)`;
+        }
+    });
+});
+</script>
+
+<!-- ============================================ -->
+<!-- IMPLEMENTATION NOTES                         -->
+<!-- ============================================ -->
+<!-- 
+BRAND ALIGNMENT:
+- Hero message: "Respira fresco, energía propia" aligns with comfort messaging
+- CTAs: "Ordena ya" (primary) and "Descubre tu ahorro" (secondary) follow the conversion strategy
+- Clean Tesla-style design maintains premium feel while being approachable
+
+TECHNICAL NOTES:
+1. Video URLs configured for Bunny CDN with 4 quality levels
+2. Automatic quality detection based on connection speed and device
+3. Parallax scrolling effect for enhanced user experience
+4. Mobile-first responsive design
+
+ELEMENTOR IMPLEMENTATION:
+- Add as HTML widget in Elementor
+- Ensure no conflicting CSS from theme
+- Test video autoplay on mobile devices
+- Monitor loading performance with GTmetrix
+
+KPIs TO TRACK:
+- Hero CTR target: ≥ 8%
+- Video load time: < 3 seconds
+- Mobile engagement rate
+-->
+
+</body>
+</html>
